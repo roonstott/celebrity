@@ -5,6 +5,7 @@ window.onload = function() {
     event.preventDefault();
 
     document.getElementById("reveal").setAttribute('class', 'hidden');
+    document.getElementById("error").setAttribute('class', 'hidden');
 
     const age = parseInt(document.getElementById("age").value);
     const happy = parseInt(document.getElementById("happy").value);
@@ -18,16 +19,24 @@ window.onload = function() {
 
     let response = document.querySelector("span#match");
 
-    if(age >= 30 && total >= 8) {
+
+    if(!age || !total) {
+    document.querySelector("div#error").removeAttribute("class");
+    }
+    else if(age >= 30 && total >= 8) {
+    document.querySelector('div#reveal').removeAttribute('class');
     document.querySelector("span#match").innerText = " Gengis Khan";
   } else if(age <= 29 && total >= 8) {
+    document.querySelector('div#reveal').removeAttribute('class');
     document.querySelector("span#match").innerText = " Elvis Presley";
   } else if(age >= 30 && total < 8) {
+    document.querySelector('div#reveal').removeAttribute('class');
     document.querySelector("span#match").innerText = " Napoleon Bonaparte";
   } else if(age <= 29 && total < 8) {
+    document.querySelector('div#reveal').removeAttribute('class');
     document.querySelector("span#match").innerText = " Hellen Keller";
   }
 
-    document.querySelector('div#reveal').removeAttribute('class');
+    
   }
 }
