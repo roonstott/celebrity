@@ -8,16 +8,17 @@
 <body>
   <h1>Celebrity Dating Quiz!</h1>
   <form>
-    <label for="age">How Old Are You?</label>
+    <label for="age">How old are you?</label>
     <input id="age" type="text" name="age">
-    <label for="happy">How Happy Are You?</label>
+    <label for="happy">How happy are you on a scale of 1-5??</label>
     <input id="happy" type="text" name="happy">
-    <label for="looks">Are Looks Really Important For You?</label>
+    <label for="looks">How important are looks on a scale of 1-5??</label>
     <input id="looks" type="text" name="looks">
+    <button type="submit">Submit</button>
   </form>
 
   <div id="reveal" class="hidden">
-    <h1>Your Soulmate is<span class="match"></span></h1>
+    <h1>Your Soulmate is<span id="match"></span></h1>
   </div>
   
 </body>

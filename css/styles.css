@@ -1,3 +1,12 @@
 .hidden {
   display: none;
 }
+
+body {
+  font-weight: bold;
+  text-align: center;
+  padding-top: 20px;
+  background-color:indianred;
+  font-size: x-large;
+  padding-left: 10px;
+}
